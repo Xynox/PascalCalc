@@ -1,17 +1,18 @@
 object Form1: TForm1
-  Left = 897
+  Left = 1413
   Height = 391
-  Top = 205
+  Top = 305
   Width = 495
-  Caption = 'Form1'
+  Caption = 'Taschenrechner'
   ClientHeight = 391
   ClientWidth = 495
   Color = clSilver
-  LCLVersion = '2.0.10.0'
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
   object Label1: TLabel
-    Left = 152
+    Left = 216
     Height = 15
-    Top = 23
+    Top = 32
     Width = 82
     Caption = 'Taschenrechner'
     ParentColor = False
@@ -20,11 +21,15 @@ object Form1: TForm1
   object e_1: TEdit
     Left = 36
     Height = 23
+    Hint = 'Hier die erste Zahl eingeben!'
     Top = 89
     Width = 156
+    NumbersOnly = True
     OnChange = e_1Change
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
-    Text = 'Erste Zahl(en) hier eingeben'
+    TextHint = 'Hier erste Zahl eingeben'
   end
   object op_plus: TButton
     Left = 216
@@ -47,7 +52,7 @@ object Form1: TForm1
   object op_multiply: TButton
     Left = 216
     Height = 30
-    Top = 136
+    Top = 160
     Width = 30
     Caption = '*'
     OnClick = op_multiplyClick
@@ -56,7 +61,7 @@ object Form1: TForm1
   object op_divide: TButton
     Left = 264
     Height = 30
-    Top = 136
+    Top = 160
     Width = 30
     Caption = '/'
     OnClick = op_divideClick
@@ -65,25 +70,29 @@ object Form1: TForm1
   object e_2: TEdit
     Left = 328
     Height = 23
+    Hint = 'Hier zweite Zahl eingeben'
     Top = 89
     Width = 144
+    NumbersOnly = True
     OnChange = e_2Change
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
-    Text = 'Zweite Zahl(en) eingeben'
+    TextHint = 'Hier zweite Zahl eingeben'
   end
   object Label2: TLabel
-    Left = 240
+    Left = 232
     Height = 15
-    Top = 248
+    Top = 264
     Width = 48
     Caption = 'Ergebnis:'
     ParentColor = False
     OnClick = Label2Click
   end
   object result: TLabel
-    Left = 232
+    Left = 221
     Height = 15
-    Top = 282
+    Top = 296
     Width = 77
     Caption = 'Keine Eingabe!'
     ParentColor = False
@@ -92,10 +101,46 @@ object Form1: TForm1
   object confirmButton: TButton
     Left = 216
     Height = 25
-    Top = 184
+    Top = 224
     Width = 78
     Caption = 'Rechnen'
     OnClick = confirmButtonClick
     TabOrder = 6
+  end
+  object check_plus: TCheckBox
+    Left = 224
+    Height = 19
+    Top = 127
+    Width = 20
+    Enabled = False
+    OnChange = check_plusChange
+    TabOrder = 7
+  end
+  object check_minus: TCheckBox
+    Left = 272
+    Height = 19
+    Top = 127
+    Width = 20
+    Enabled = False
+    OnChange = check_plusChange
+    TabOrder = 8
+  end
+  object check_multiply: TCheckBox
+    Left = 224
+    Height = 19
+    Top = 192
+    Width = 20
+    Enabled = False
+    OnChange = check_plusChange
+    TabOrder = 9
+  end
+  object check_divide: TCheckBox
+    Left = 272
+    Height = 19
+    Top = 192
+    Width = 20
+    Enabled = False
+    OnChange = check_plusChange
+    TabOrder = 10
   end
 end
