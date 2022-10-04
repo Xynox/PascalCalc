@@ -1,0 +1,101 @@
+object Form1: TForm1
+  Left = 897
+  Height = 391
+  Top = 205
+  Width = 495
+  Caption = 'Form1'
+  ClientHeight = 391
+  ClientWidth = 495
+  Color = clSilver
+  LCLVersion = '2.0.10.0'
+  object Label1: TLabel
+    Left = 152
+    Height = 15
+    Top = 23
+    Width = 82
+    Caption = 'Taschenrechner'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object e_1: TEdit
+    Left = 36
+    Height = 23
+    Top = 89
+    Width = 156
+    OnChange = e_1Change
+    TabOrder = 0
+    Text = 'Erste Zahl(en) hier eingeben'
+  end
+  object op_plus: TButton
+    Left = 216
+    Height = 30
+    Top = 89
+    Width = 30
+    Caption = '+'
+    OnClick = op_plusClick
+    TabOrder = 1
+  end
+  object op_minus: TButton
+    Left = 264
+    Height = 30
+    Top = 89
+    Width = 30
+    Caption = '-'
+    OnClick = op_minusClick
+    TabOrder = 2
+  end
+  object op_multiply: TButton
+    Left = 216
+    Height = 30
+    Top = 136
+    Width = 30
+    Caption = '*'
+    OnClick = op_multiplyClick
+    TabOrder = 3
+  end
+  object op_divide: TButton
+    Left = 264
+    Height = 30
+    Top = 136
+    Width = 30
+    Caption = '/'
+    OnClick = op_divideClick
+    TabOrder = 4
+  end
+  object e_2: TEdit
+    Left = 328
+    Height = 23
+    Top = 89
+    Width = 144
+    OnChange = e_2Change
+    TabOrder = 5
+    Text = 'Zweite Zahl(en) eingeben'
+  end
+  object Label2: TLabel
+    Left = 240
+    Height = 15
+    Top = 248
+    Width = 48
+    Caption = 'Ergebnis:'
+    ParentColor = False
+    OnClick = Label2Click
+  end
+  object result: TLabel
+    Left = 232
+    Height = 15
+    Top = 282
+    Width = 77
+    Caption = 'Keine Eingabe!'
+    ParentColor = False
+    OnClick = resultClick
+  end
+  object confirmButton: TButton
+    Left = 216
+    Height = 25
+    Top = 184
+    Width = 78
+    Caption = 'Rechnen'
+    OnClick = confirmButtonClick
+    TabOrder = 6
+  end
+end
